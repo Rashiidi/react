@@ -1,15 +1,44 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import TextControlsExample from './components/create'
+import Create from './components/create';
 import Navbar from './components/navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import Home from './components/home';
+import Contact from './components/contact';
+import axios from "axios";
+import {toast} from "react-toastify";
+
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-      <div class="Content">
-      <TextControlsExample/>
+    <Router>
+      
+      <div className="App">
+        <Navbar />
+        
+      
+        <div className="content">
+        <Switch>
+          
+          {/* <Form /> */}
+        
+          <Route exact path="/">
+              <Home/>
+          </Route>
+
+          <Route exact path="/Create" >
+            <Create />
+          </Route>
+              
+          <Route exact path="/Contact">
+            <Contact />
+          </Route>
+            
+        </Switch>
+        </div>
+      
       </div>
-    </div>
+    </Router>
+
   );
 }
 
