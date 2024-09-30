@@ -94,3 +94,21 @@ body {
   padding: 0.7rem 1.5rem;
   margin-top: 1.2rem;
 }
+
+.preview{
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: solid lavender;
+}
+
+.preview:hover {
+  box-shadow: 1px 2px 3px lavender;
+}
+.preview h3{
+  font-size: 15px;
+  color: blueviolet;
+  margin-bottom: 6px;
+}
+.preview a{
+  text-decoration: none !important;
+}

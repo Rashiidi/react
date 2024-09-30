@@ -1,13 +1,13 @@
 import './App.css';
 import Create from './components/create';
 import Navbar from './components/navbar';
+import BlogDetails from './components/BlogDetails';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import Home from './components/home';
 import Contact from './components/contact';
 import axios from "axios";
 import {toast} from "react-toastify";
-
 function App() {
   return (
     <Router>
@@ -32,6 +32,10 @@ function App() {
           <Route exact path="/Contact">
             <Contact />
           </Route>
+
+          <Route path="/Blog-details/:id">
+                <BlogDetails/>
+              </Route>
             
         </Switch>
         </div>
